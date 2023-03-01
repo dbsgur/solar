@@ -23,4 +23,13 @@ export class DiaryService {
     createSpeech(originalText: string) {
         return this.openAIClient.createSpeech(originalText);
     }
+
+    createImage(originalText: string) {
+        // ?? await 필요 없나 ?
+        return Promise.all([
+            this.openAIClient.createImage(originalText),
+            this.openAIClient.createImage(originalText),
+            this.openAIClient.createImage(originalText),
+        ]);
+    }
 }
