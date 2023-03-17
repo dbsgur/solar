@@ -30,20 +30,14 @@ export class OpenAIClient {
     }
 
     async createImage(prompt: string) {
-        // HACK: 여러개 생성해야하는데, dalle3는 한번에 하나만 생성 가능
-        const images = await Promise.all([
-            this.client.images.generate({
-                model: 'dall-e-3',
-                style: 'natural',
-                prompt,
-            }),
-            this.client.images.generate({
-                model: 'dall-e-3',
-                style: 'natural',
-                prompt,
-            }),
-        ]);
-        return images;
+        const {
+            data: [{ url }],
+        } = await this.client.images.generate({
+            model: 'dall-e-3',
+            style: 'natural',
+            prompt,
+        });
+        return url;
     }
 
     public poem = {
