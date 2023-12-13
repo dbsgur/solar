@@ -1,12 +1,12 @@
 import fs from 'fs';
 import { Service, Inject } from 'typedi';
-import { OpenAIRepository } from '../../openai/infrastructure/repository';
+import { OpenAIClient } from '../../../libs/openai';
 import { TTSRepository } from '../infrastructure/repository';
 
 @Service()
 export class TTSService {
     @Inject()
-    private openAIRepository!: OpenAIRepository;
+    private openAIClient!: OpenAIClient;
 
     @Inject()
     private tTSRepository!: TTSRepository;
@@ -18,10 +18,6 @@ export class TTSService {
     }
 
     generateSpeech(inputText: string) {
-        return this.openAIRepository.audio.speech.create({
-            model: 'tts-1',
-            voice: 'nova',
-            input: inputText,
-        });
+        return this.openAIClient.createSpeech(inputText);
     }
 }
