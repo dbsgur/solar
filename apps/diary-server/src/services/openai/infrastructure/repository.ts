@@ -1,3 +1,4 @@
+import fs from 'fs';
 import OpenAI from 'openai';
 import { Service } from 'typedi';
 
@@ -12,5 +13,12 @@ export class OpenAIRepository {
 
     get audio() {
         return this.client.audio;
+    }
+
+    async fineTuningTone() {
+        await this.client.files.create({
+            file: fs.createReadStream('tone.jsonl'),
+            purpose: 'fine-tune',
+        });
     }
 }
