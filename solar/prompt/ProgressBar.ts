@@ -5,23 +5,25 @@ export class ProgressBar {
   current: number;
   barLength: number;
 
+  static TOTAL_AMOUNT = 100;
+
   constructor() {
     this.barLength = process.stdout.columns! - 30;
   }
 
-  init(total: number) {
-    this.total = total;
+  init(): void {
+    this.total = ProgressBar.TOTAL_AMOUNT;
     this.current = 0;
     this.update(this.current);
   }
 
-  update(current: number) {
+  update(current: number): void {
     this.current = current;
     const currentProgress = this.current / this.total;
     this.draw(currentProgress);
   }
 
-  draw(currentProgress: number) {
+  draw(currentProgress: number): void {
     const filledBarLength = (currentProgress * this.barLength).toFixed(0);
     const emptyBarLength = this.barLength - Number(filledBarLength);
     const filledBar = this.get_bar(
@@ -42,7 +44,7 @@ export class ProgressBar {
     length: number,
     char: string,
     color: (str: string) => string
-  ) {
+  ): string {
     let str = "";
     for (let i = 0; i < length; i++) str += char;
     return color(str);
