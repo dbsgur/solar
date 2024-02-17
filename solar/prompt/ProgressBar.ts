@@ -5,14 +5,12 @@ export class ProgressBar {
   current: number;
   barLength: number;
 
-  static TOTAL_AMOUNT = 100;
-
   constructor() {
     this.barLength = process.stdout.columns! - 30;
   }
 
   init(): void {
-    this.total = ProgressBar.TOTAL_AMOUNT;
+    this.total = 100;
     this.current = 0;
     this.update(this.current);
   }
@@ -45,8 +43,7 @@ export class ProgressBar {
     char: string,
     color: (str: string) => string
   ): string {
-    let str = "";
-    for (let i = 0; i < length; i++) str += char;
+    const str = char.repeat(length);
     return color(str);
   }
 }

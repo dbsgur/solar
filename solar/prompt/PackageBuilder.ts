@@ -11,12 +11,12 @@ export class PackageBuilder {
     this.progressBar = new ProgressBar();
   }
 
-  async endLoading(): Promise<void> {
+  private async endLoading(): Promise<void> {
     if (this.current >= 100) return;
-    for (let i = this.current + 10; i < 100; i += 10) {
+    for (let index = this.current + 10; index < 100; index += 10) {
       await new Promise<void>((resolve) => {
         setTimeout(() => {
-          this.current = i;
+          this.current = index;
           this.progressBar.update(this.current);
           resolve();
         }, 100);
@@ -26,7 +26,7 @@ export class PackageBuilder {
     this.progressBar.update(100);
   }
 
-  loading(): void {
+  private loading(): void {
     this.current = this.current >= 100 ? this.current : this.current + 10;
     this.progressBar.update(this.current);
   }
@@ -38,19 +38,20 @@ export class PackageBuilder {
     > = {
       SSR: async (answers) => this.createTemplate("ssr", answers),
       CSR: async (answers) => this.createTemplate("csr", answers),
+      SERVER: async (answers) => this.createTemplate("server", answers),
     };
     await data[answers.renderType](answers);
   }
 
   async copyDir(templateFolderName: string, name: string): Promise<void> {
     const src = path.resolve(__dirname, `../template/${templateFolderName}`);
-    const dest = path.resolve(__dirname, `../../services/${name}`);
+    const dest = path.resolve(__dirname, `../../apps/${name}`);
     await new Promise<void>((resolve) => {
       fsExtra.copy(src, dest).then(() => resolve());
     });
   }
 
-  async changeWord(
+  private async changeWord(
     destFilePath: string,
     func: (data: string) => string,
     data: string
@@ -63,7 +64,8 @@ export class PackageBuilder {
     });
   }
 
-  async changeFile(
+  // NOTE: 파일을 읽어서 내용을 변경하고 다시 쓰는 함수입니다.
+  private async changeFile(
     destFilePath: string,
     changeFunc: (data: string) => string
   ): Promise<void> {
@@ -76,10 +78,14 @@ export class PackageBuilder {
     });
   }
 
-  async changePackageJsonFile(name: string, version: string): Promise<void> {
+  // NOTE: package.json 파일을 읽어서 name과 version을 변경합니다.
+  private async changePackageJsonFile(
+    name: string,
+    version: string
+  ): Promise<void> {
     const destinationPackageJson = path.resolve(
       __dirname,
-      `../../services/${name}/package.json`
+      `../../apps/${name}/package.json`
     );
     await this.changeFile(destinationPackageJson, (data) =>
       data.replace(/1name1/g, name)
@@ -89,17 +95,19 @@ export class PackageBuilder {
     );
   }
 
-  async changeReadmeName(name: string): Promise<void> {
+  // NOTE: README.md 파일을 읽어서 name을 변경합니다.
+  private async changeReadmeName(name: string): Promise<void> {
     const destinationReadme = path.resolve(
       __dirname,
-      `../../services/${name}/README.md`
+      `../../apps/${name}/README.md`
     );
     await this.changeFile(destinationReadme, (data) =>
       data.replace(/1name1/g, name.toUpperCase())
     );
   }
 
-  async createTemplate(
+  // NOTE: 사용자가 선택한 템플릿을 복사하고 package.json, README.md 파일을 변경합니다.
+  private async createTemplate(
     templateFolderName: string,
     answers: Record<string, string>
   ): Promise<void> {
