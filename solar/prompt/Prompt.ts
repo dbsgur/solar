@@ -81,13 +81,11 @@ export class Prompt {
 
   // prettier-ignore
   logOutro() {
-    console.log(colors.bgRed("\n\n/********************************************/"));
-    console.log(colors.bgRed("   프로젝트 설정이 끝났습니다.🌞     "));
-    console.log(colors.bgRed("       다음과 같은 명령어를 입력해주세요.     "));
-    console.log(colors.bgRed(`           cd apps/프로젝트 이름          `));
-    console.log(colors.bgRed(`                  yarn                        `));
-    console.log(colors.bgRed(`                yarn serve                    `));
-    console.log(colors.bgRed("/********************************************/\n\n"));
+    console.log(colors.red("\n\n/********************************************/"));
+    console.log(colors.red("   Project setup is done. 🌞     "));
+    console.log(colors.red("       Please read README.md file. 😁    "));
+    console.log(colors.red(`           cd apps/프로젝트 이름          `));
+    console.log(colors.red("/********************************************/\n\n"));
   }
 
   private getInput(index: number, resolve: (value: string) => void): void {

@@ -1,0 +1,11 @@
+{
+  "name": "1name1",
+  "version": "1version1",
+  "private": true,
+  "author": "HYEOK",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

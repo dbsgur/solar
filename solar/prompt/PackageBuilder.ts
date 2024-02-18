@@ -114,7 +114,6 @@ export class PackageBuilder {
     this.progressBar.init();
     const { name, version } = answers;
 
-    // copy ssr template to services
     await this.copyDir(templateFolderName, name);
 
     // change package.json package name and version

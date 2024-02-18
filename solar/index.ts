@@ -21,8 +21,8 @@ const questions: IQuestionInfo[] = [
   {
     key: "renderType",
     type: "list",
-    choices: ["SSR", "CSR"],
-    question: `SSR or CSR 중에 선택해주세요:`,
+    choices: ["SSR", "CSR", "SERVER"],
+    question: `SSR, CSR, SERVER 중에 선택해주세요:`,
   },
 ];
 
