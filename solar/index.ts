@@ -26,5 +26,7 @@ const questions: IQuestionInfo[] = [
   },
 ];
 
-new Prompt().setQuestions(questions).start();
-// .then((_) => _);
+new Prompt()
+  .setQuestions(questions)
+  .start()
+  .then((_) => _);
