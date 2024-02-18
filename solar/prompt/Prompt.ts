@@ -27,56 +27,56 @@ export class Prompt {
 
   // prettier-ignore
   logIntro() {
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@$$@@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@#,,#@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@:  :@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@=    =@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@*.--.=@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@####@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@#***$@@@@@@@@@@@@@@@@@@@@@@@@$***#@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@*   ,#@@@@@@@@@@@@@@@@@@@@@@#,   *@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@*   ;@@@@@@@@@*.  .*@@@@@@@@@;   *@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@*  :@@@@@@$;     .    ;$@@@@@@:    @@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@$,;@@@@@$;      :=!;;-  ;$@@@@@;   @@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@#@@@@@=.       ,,~#@#$. .=@@@@@! @@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@#              -@@:  #@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@=                 !@=. =@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@$.                  :@= .$@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@;                    :@: ;@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@$                      !@. $@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@;                       @$ ;@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@                        -#- @@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@                         @; @@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@==@@@@*                         #; *@@@@*=@@@@`))
-    console.log(colors.cyan(`@@#: .#@@@.                         ~! .@@@#. :#@@`))
-    console.log(colors.cyan(`@$,  -#@@@            SOLAR         ,=. @@@#-  ,$@`))
-    console.log(colors.cyan(`@$,  -#@@#                          ,:  @@@#-  ,$@`))
-    console.log(colors.cyan(`@@#: .#@@                              .@@@#. :#@@`))
-    console.log(colors.cyan(`@@@@==@@@                              *@@@@==@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@,                            @@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@                            @@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@;                          ;@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@$                          $@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@                          ;@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@                         .$@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@                        =@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@#                    #@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@#@@@@@=.                .=@@@@@#@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@$,;@@@@@$;              ;$@@@@@;,$@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@*  :@@@@@@$;          ;$@@@@@@:  *@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@*   ;@@@@@@@@@*.  .*@@@@@@@@@;   *@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@*   ,#@@@@@@@@@@@@@@@@@@@@@@#,   *@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@#***$@@@@@@@@@@@@@@@@@@@@@@@@$***#@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@####@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@=.--.*@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@=    =@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@:  :@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@#,,#@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@$$@@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@$$@@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@#,,#@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@:  :@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@=    =@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@*.--.=@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@####@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@#***$@@@@@@@@@@@@@@@@@@@@@@@@$***#@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@*   ,#@@@@@@@@@@@@@@@@@@@@@@#,   *@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@*   ;@@@@@@@@@*.  .*@@@@@@@@@;   *@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@*  :@@@@@@$;     .    ;$@@@@@@:    @@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@$,;@@@@@$;      :=!;;-  ;$@@@@@;   @@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@#@@@@@=.       ,,~#@#$. .=@@@@@! @@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@#              -@@:  #@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@=                 !@=. =@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@$.                  :@= .$@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@;                    :@: ;@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@$                      !@. $@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@;                       @$ ;@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@                        -#- @@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@                         @; @@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@==@@@@*                         #; *@@@@*=@@@@`));
+    console.log(colors.cyan(`@@#: .#@@@.                         ~! .@@@#. :#@@`));
+    console.log(colors.cyan(`@$,  -#@@@            YUN           ,=. @@@#-  ,$@`));
+    console.log(colors.cyan(`@$,  -#@@#           HYEOK          ,:  @@@#-  ,$@`));
+    console.log(colors.cyan(`@@#: .#@@                              .@@@#. :#@@`));
+    console.log(colors.cyan(`@@@@==@@@                              *@@@@==@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@,                            @@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@                            @@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@;                          ;@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@$                          $@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@                          ;@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@                         .$@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@                        =@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@#                    #@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@#@@@@@=.                .=@@@@@#@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@$,;@@@@@$;              ;$@@@@@;,$@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@*  :@@@@@@$;          ;$@@@@@@:  *@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@*   ;@@@@@@@@@*.  .*@@@@@@@@@;   *@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@*   ,#@@@@@@@@@@@@@@@@@@@@@@#,   *@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@#***$@@@@@@@@@@@@@@@@@@@@@@@@$***#@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@####@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@=.--.*@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@=    =@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@:  :@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@#,,#@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@$$@@@@@@@@@@@@@@@@@@@@@@@@`));
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n`));
   }
 
   // prettier-ignore
