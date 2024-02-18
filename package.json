@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "HYEOK",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "solar": "ts-node solar/index.ts"
+  }
 }

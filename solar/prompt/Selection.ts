@@ -13,28 +13,28 @@ export class Selection {
     this.y = 0;
   }
 
-  get choices(): string[] {
+  private get choices(): string[] {
     return this.questionInfo.choices;
   }
 
-  get question(): string {
+  private get question(): string {
     return this.questionInfo.question;
   }
 
-  hideCursor(): void {
+  private hideCursor(): void {
     stdout.write("\x1B[?25l");
   }
 
-  showCursor(): void {
+  private showCursor(): void {
     stdout.write("\x1B[?25h");
   }
 
-  write(str: string): void {
+  private write(str: string): void {
     stdout.write(str);
   }
 
   start(): void {
-    this.write(`🎩 ${colors.green(this.question)}\n`);
+    this.write(`🍓 ${colors.green(this.question)}\n`);
     stdin.on("keypress", this.keyPressedEventHandler(this));
     // readline.emitKeypressEvents(stdin);
     stdin.setRawMode(true);
@@ -44,13 +44,13 @@ export class Selection {
     this.hideCursor();
   }
 
-  printChoices(): void {
+  private printChoices(): void {
     for (let i = 0; i < this.choices.length; i++) {
       this.printChoice(i);
     }
   }
 
-  printChoice(index: number): void {
+  private printChoice(index: number): void {
     if (this.y === index) {
       this.write(colors.blue(`>  ${this.choices[index]}`) + "\n");
     } else {
@@ -58,7 +58,7 @@ export class Selection {
     }
   }
 
-  reprintChoices(): void {
+  private reprintChoices(): void {
     for (let i = this.choices.length - 1; i >= 0; i--) {
       stdout.moveCursor(0, 0);
       stdout.clearLine(0);
@@ -69,7 +69,9 @@ export class Selection {
     }
   }
 
-  keyPressedEventHandler(self: Selection): (str: string, key: any) => void {
+  private keyPressedEventHandler(
+    self: Selection
+  ): (str: string, key: any) => void {
     return (_, key) => {
       const { name } = key;
       switch (name) {
@@ -86,21 +88,21 @@ export class Selection {
     };
   }
 
-  upArrow(): void {
+  private upArrow(): void {
     if (this.y > 0) {
       this.y--;
       this.reprintChoices();
     }
   }
 
-  downArrow(): void {
+  private downArrow(): void {
     if (this.y < this.choices.length - 1) {
       this.y++;
       this.reprintChoices();
     }
   }
 
-  enter(): void {
+  private enter(): void {
     this.resolve(this.choices[this.y]);
   }
 }
