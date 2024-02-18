@@ -27,31 +27,56 @@ export class Prompt {
 
   // prettier-ignore
   logIntro() {
-    console.log(colors.cyan(`@@@@@@@@@@@@#@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@$-$@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@- -@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@ :@@@@@@@@@@@@@: @@@@`))
-    console.log(colors.cyan(`@@@@:-#@@!;;;;;!@@#- @@@@`))
-    console.log(colors.cyan(`@@@@@#@#,   :$$,,#@#;@@@@`))
-    console.log(colors.cyan(`@@@@@@#        *: #@@@@@@`))
-    console.log(colors.cyan(`@@@@@@,         ::,@@@@@@`))
-    console.log(colors.cyan(`@@@@@!           *,!@@@@@`))
-    console.log(colors.cyan(`@@@@@;            $;@@@@@`))
-    console.log(colors.cyan(`@$-@@;            $;@@-$@`))
-    console.log(colors.cyan(`#- @;-   SOLAR    :;@@ -#`))
-    console.log(colors.cyan(`@$-@               ;@@-$@`))
-    console.log(colors.cyan(`@@@@@;             ;@@@@@`))
-    console.log(colors.cyan(`@@@@@~             !@@@@@`))
-    console.log(colors.cyan(`@@@@@             ,@@@@@@`))
-    console.log(colors.cyan(`@@@@@@            #@@@@@@`))
-    console.log(colors.cyan(`@@@@@#@#,       ,#@#@@@@@`))
-    console.log(colors.cyan(`@@@@:-#@@!;;;;;!@@#-:@@@@`))
-    console.log(colors.cyan(`@@@@ :@@@@@@@@@@@@@: @@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@- -@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@$-$@@@@@@@@@@@`))
-    console.log(colors.cyan(`@@@@@@@@@@@@#@@@@@@@@@@@@\n`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@$$@@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@#,,#@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@:  :@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@=    =@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@*.--.=@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@####@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@#***$@@@@@@@@@@@@@@@@@@@@@@@@$***#@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@*   ,#@@@@@@@@@@@@@@@@@@@@@@#,   *@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@*   ;@@@@@@@@@*.  .*@@@@@@@@@;   *@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@*  :@@@@@@$;     .    ;$@@@@@@:    @@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@$,;@@@@@$;      :=!;;-  ;$@@@@@;   @@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@#@@@@@=.       ,,~#@#$. .=@@@@@! @@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@#              -@@:  #@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@=                 !@=. =@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@$.                  :@= .$@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@;                    :@: ;@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@$                      !@. $@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@;                       @$ ;@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@                        -#- @@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@                         @; @@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@==@@@@*                         #; *@@@@*=@@@@`))
+    console.log(colors.cyan(`@@#: .#@@@.                         ~! .@@@#. :#@@`))
+    console.log(colors.cyan(`@$,  -#@@@            SOLAR         ,=. @@@#-  ,$@`))
+    console.log(colors.cyan(`@$,  -#@@#                          ,:  @@@#-  ,$@`))
+    console.log(colors.cyan(`@@#: .#@@                              .@@@#. :#@@`))
+    console.log(colors.cyan(`@@@@==@@@                              *@@@@==@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@,                            @@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@                            @@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@;                          ;@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@$                          $@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@                          ;@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@                         .$@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@                        =@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@#                    #@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@#@@@@@=.                .=@@@@@#@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@$,;@@@@@$;              ;$@@@@@;,$@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@*  :@@@@@@$;          ;$@@@@@@:  *@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@*   ;@@@@@@@@@*.  .*@@@@@@@@@;   *@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@*   ,#@@@@@@@@@@@@@@@@@@@@@@#,   *@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@#***$@@@@@@@@@@@@@@@@@@@@@@@@$***#@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@####@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@=.--.*@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@=    =@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@:  :@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@#,,#@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@$$@@@@@@@@@@@@@@@@@@@@@@@@`))
+    console.log(colors.cyan(`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n`))
   }
 
   // prettier-ignore
@@ -76,7 +101,6 @@ export class Prompt {
   private async getInputByType(index: number): Promise<string> {
     const type: questionType = this.questions[index].type;
     const table: {
-      // @ts-ignore
       [key in questionType]: (
         index: number,
         resolve: (value: string) => void
@@ -87,7 +111,6 @@ export class Prompt {
     };
 
     return await new Promise((resolve) => {
-      // @ts-ignore
       table[type](index, resolve);
     });
   }

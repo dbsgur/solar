@@ -1,4 +1,7 @@
-const questions = [
+import { Prompt } from "./prompt";
+import { IQuestionInfo } from "./types";
+
+const questions: IQuestionInfo[] = [
   {
     key: "name",
     type: "input",
@@ -23,8 +26,5 @@ const questions = [
   },
 ];
 
-// new Prompt()
-//   .setQuestions(questions)
-//   .start()
-//   .then((_) => _);
-// s;
+new Prompt().setQuestions(questions).start();
+// .then((_) => _);

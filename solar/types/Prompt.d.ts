@@ -1,11 +1,9 @@
-export class questionType {
-  type: "input" | "list";
-}
+export type questionType = "input" | "list";
 
 export interface IQuestionInfo {
   key: string;
   type: questionType;
-  required: boolean;
+  required?: boolean;
   question: string;
   choices?: string[];
   default?: string;

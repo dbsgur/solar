@@ -5,6 +5,6 @@
   "author": "HYEOK",
   "license": "MIT",
   "scripts": {
-    "solar": "ts-node solar/index.ts"
+    "solar": "cd solar && npm start"
   }
 }
