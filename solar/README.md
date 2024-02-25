@@ -11,6 +11,8 @@ template generator이다. (only for react)
 ### SERVER
 - koa
 - koa-body
+- @koa/router
+- @types/koa__router
 - sha.js
 
 ### CSR
