@@ -1,10 +1,15 @@
 {
-  "name": "hyuk-solar",
+  "name": "hyeok-solar",
   "version": "1.0.0",
   "main": "index.js",
   "author": "HYEOK",
   "license": "MIT",
   "scripts": {
     "solar": "cd solar && npm start"
+  },
+  "dependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
   }
 }
