@@ -11,13 +11,17 @@ template generator이다. (only for react)
 ### SERVER
 - koa
 - koa-body
-- @koa/router
-- @types/koa__router
+- @koa/router, @types/koa__router
 - sha.js
 
 ### CSR
-- react
+- react, @types/react
+- react-dom, @types/react-dom
 - react-query
+- webpack, webpack-cli, webpack-dev-server
+- html-webpack-plugin
+
+
 
 ### SSR
 - next
