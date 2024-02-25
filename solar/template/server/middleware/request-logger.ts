@@ -1,6 +1,6 @@
 import { Context } from 'koa';
 
-export const requestLogger = async(ctx: Context, next: () => Promise<any>) => {
+export const requestLoggerMiddleware = async(ctx: Context, next: () => Promise<any>) => {
   const start = Date.now();
   try {
     await next();

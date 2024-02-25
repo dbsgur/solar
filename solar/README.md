@@ -10,10 +10,12 @@ template generator이다. (only for react)
 ## TEMPLATE Environment
 ### SERVER
 - koa
+- koa-body
 - sha.js
 
 ### CSR
 - react
+- react-query
 
 ### SSR
 - next
