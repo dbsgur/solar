@@ -1,34 +1,28 @@
-import { Navigate, Outlet, useLocation } from 'react-router-dom';
+// import { Navigate, Outlet, useLocation } from 'react-router-dom';
 // import { useUser } from '@libs/auth';
 
 function AuthorizedRoute() {
   // const [user] = useUser({ canBeUnauthenticated: true });
-  const location = useLocation();
+  // const location = useLocation();
 
   if (false) { // !user
-    return <Navigate to={'ROUTE_SIGN_IN'} state={{ from: location }} replace />;
+    // return <Navigate to={'ROUTE_SIGN_IN'} state={{ from: location }} replace />;
   }
 
-  return <Outlet />;
+  // return <Outlet />;
 }
 
 function UnauthorizedRoute() {
   // const [user] = useUser({ canBeUnauthenticated: true });
   const [user] = [false];
-  const location = useLocation();
-
-  // formik hooks
-  // query hooks
-  // calculated values
-  // effects
-  // handlers
+  // const location = useLocation();
 
   if (user) {
-    const state = location.state as { from?: string } | null;
-    return <Navigate to={state?.from || 'ROUTE_ROOT'} state={{ from: location }} replace />;
+    // const state = location.state as { from?: string } | null;
+    // return <Navigate to={state?.from || 'ROUTE_ROOT'} state={{ from: location }} replace />;
   }
 
-  return <Outlet />;
+  // return <Outlet />;
 }
 
 export { AuthorizedRoute, UnauthorizedRoute };
