@@ -5,7 +5,7 @@
   "author": "HYEOK",
   "license": "MIT",
   "scripts": {
-    "solar": "cd solar && npm start"
+    "solar": "cd solar && npm solar"
   },
   "dependencies": {
     "eslint": "^8.57.0",

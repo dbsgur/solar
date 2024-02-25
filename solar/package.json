@@ -2,6 +2,7 @@
   "name": "solar",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "license": "MIT",
   "author": "HYEOK",
   "dependencies": {
@@ -12,7 +13,7 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "start": "ts-node ./index.ts"
+    "solar": "ts-node ./index.ts"
   },
   "devDependencies": {
     "@types/node": "^20.11.19"
