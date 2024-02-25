@@ -17,11 +17,11 @@ template generator이다. (only for react)
 ### CSR
 - react, @types/react
 - react-dom, @types/react-dom
+- react-router-dom
 - react-query
 - webpack, webpack-cli, webpack-dev-server
 - html-webpack-plugin
-
-
+- axios
 
 ### SSR
 - next
