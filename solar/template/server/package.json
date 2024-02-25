@@ -6,6 +6,9 @@
   "scripts": {
     "start": "ts-node index.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "koa": "^2.15.0",
+    "sha.js": "^2.4.11"
+  },
   "devDependencies": {}
 }
