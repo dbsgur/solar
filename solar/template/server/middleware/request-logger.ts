@@ -5,7 +5,11 @@ export const requestLoggerMiddleware = async(ctx: Context, next: () => Promise<a
   try {
     await next();
   } finally {
-    const duration = Date.now() - start;
-    console.log(`[${ctx.method} REQUEST] ${ctx.url} - ${duration}ms`);
+    // NOTE: 내부 통신은 무시한다.
+    if (!ctx.req.url?.includes('_next')){
+      const duration = Date.now() - start;
+      const txId = ctx.state && ctx.state.txId;
+      console.log(`[${ctx.method}, ${txId}] ${ctx.url} - ${duration}ms`);
+    }
   }
 }
