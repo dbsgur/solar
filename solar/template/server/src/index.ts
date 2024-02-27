@@ -1,13 +1,14 @@
 // TODO: Graceful shutdown
 import Koa from "koa";
 import koaBody from "koa-body";
-import { errorHandlerMiddleware, requestLoggerMiddleware } from "../middleware";
+import { errorHandlerMiddleware, requestLoggerMiddleware, uuidMiddleware } from "../middleware";
 import { router } from "./routes";
 
 (async () => {
   const app = new Koa();
   // TODO: 포트 바꿔라잉
   const PORT = 6;
+  app.use(uuidMiddleware);
   app.use(requestLoggerMiddleware);
   app.use(errorHandlerMiddleware);
   // TODO: CORS middleware
