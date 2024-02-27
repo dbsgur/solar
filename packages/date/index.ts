@@ -117,11 +117,7 @@ export function getDateRangeAsTimeUnit(
     .map((_, index) => startAt.add(index, unit).startOf(unit));
 }
 
-/*
- * startAt - endAt 사이의 시간을 unit 단위로 리턴
- * @param startAt
- * @param endAt
- */
+// NOTE: startAt - endAt 사이의 시간을 unit 단위로 리턴
 export const getTimeDiff = (
   startAt: DateTime,
   endAt: DateTime,
@@ -130,17 +126,11 @@ export const getTimeDiff = (
   return dayjs(endAt).diff(startAt, unit);
 };
 
-/**
- * 단위 시간을 지정 포맷으로 변환해서 리턴
- * @param time
- */
+// NOTE: 단위 시간을 지정 포맷으로 변환해서 리턴
 export const getDuration = (time: number, unit: "minute", format: "HH:mm") =>
   dayjs.duration(time, unit).format(format);
 
-/**
- *  Return timezone short name // e.g PDT or PDT (UTC-07:00)
- * @param timezone
- *  */
+// NOTE: timezone short name // e.g PDT or PDT (UTC-07:00)
 export function formatTimezone(
   timezone: string,
   format: "z" | "z (UTCZ)"
@@ -148,9 +138,7 @@ export function formatTimezone(
   return dayjs().tz(timezone).format(format);
 }
 
-/**
- * @param options.format 특정 포맷은 크롬에서는 잘 동작하지만, Safari 에서는 동작하지 않을 수 있으므로 포맷을 명시해주어야한다.
- */
+// NOTE: 특정 포맷은 크롬에서는 잘 동작하지만, Safari 에서는 동작하지 않을 수 있으므로 포맷을 명시해주어야한다.
 export const getDateWithTimezone = (
   date: dayjs.ConfigType,
   timezone: string,
