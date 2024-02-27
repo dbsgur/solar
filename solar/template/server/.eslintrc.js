@@ -1,4 +1,7 @@
-const airbnbBase = require('airbnb-base');
 module.exports = {
-  "extends": airbnbBase
+    extends: ["airbnb", "prettier"],
+    plugins: ["prettier"],
+    rules: {
+        "prettier/prettier": "error",
+    },
 };
