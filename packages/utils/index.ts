@@ -21,3 +21,9 @@ export function conversionRate(numerator: number, denominator: number) {
 export function strippedUnchanged(object: Record<string, any>, changedObject: Record<string, any>) {
   return Object.fromEntries(Object.entries(changedObject).filter(([key, value]) => object[key] !== value));
 }
+
+export function sleep(ms: number) {
+  return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+  });
+}
