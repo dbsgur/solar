@@ -1,0 +1,38 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "start": {
+      "dependsOn": ["^build"]
+    },
+    "start:dev": {
+      "dependsOn": ["^build"],
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "build-landing": {
+      "dependsOn": ["build", "sitemap"]
+    },
+    "sitemap": {
+      "dependsOn": ["build"],
+      "outputs": ["public/robots.txt", "public/sitemap*.xml"]
+    },
+    "lint": {},
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "test:ci": {
+      "dependsOn": ["^build"]
+    },
+    "storybook": {
+      "dependsOn": ["^build"],
+      "cache": false
+    },
+    "build-storybook": {
+      "dependsOn": ["^build"],
+      "outputs": ["storybook-static/**"]
+    }
+  }
+}
