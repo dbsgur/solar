@@ -1,18 +1,23 @@
-# ???
+# USAGE
 
-언젠가 무엇을 만들고 싶다.
-무엇이 떠오르지 않아, 일단 초기 프로젝트 환경 구축 자동화를 하기 위해 만든다.
+## Create Template
 
-후에, 어떤 것이 추가될지 미지수,,,!
+`cd solar && yarn install && npm run solar`
+
+# EXPLAIN
 
 - MONO REPO
   - Only use yarn
   - yarn 4.1.0 (berry)
   - turbo
 
-## Create Template
+## Server
 
-- cd solar && yarn install && npm run solar
+- USE DDD Architecture
+
+## Client (CSR)
+
+- USE REACT, shadcn/ui, atomic pattern
 
 ## TODO
 
