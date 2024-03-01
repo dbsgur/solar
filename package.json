@@ -17,7 +17,8 @@
     "solar": "cd solar && npm solar"
   },
   "dependencies": {
-    "dayjs": "^1.11.10"
+    "dayjs": "^1.11.10",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@types/node": "^20.11.20",

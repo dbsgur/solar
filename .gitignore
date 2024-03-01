@@ -1,5 +1,4 @@
 node_modules/
-<<<<<<< Updated upstream
 
 .yarn/*
 !.yarn/releases
@@ -11,9 +10,9 @@ node_modules/
 # if you are NOT using Zero-installs, then:
 # comment the following lines
 # !.yarn/cache
+
 # and uncomment the following lines
 .pnp.*
-=======
 ### Turbo ###
 # Turborepo task cache
 .turbo
@@ -25,4 +24,5 @@ node_modules/
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
->>>>>>> Stashed changes
+
+dist
