@@ -1,5 +1,18 @@
 {
   "extends": "../../client-config.json", // NOTE: 만들어질 프로젝트의 상대경로임.
+  "baseUrl": "src",
+  "compilerOptions": {
+    "paths": {
+      "~assets/*": ["assets/*"],
+      "~components/*": ["app/components/*"],
+      "~hooks/*": ["app/hooks/*"],
+      "~libs/*": ["app/libs/*"],
+      "~models/*": ["app/models/*"],
+      "~repositories/*": ["app/repositories/*"],
+      "~routes/*": ["app/routes/*"],
+      "~screens/*": ["app/screens/*"]
+    }
+  },
   "include": ["src"],
   "exclude": ["node_modules"]
 }
