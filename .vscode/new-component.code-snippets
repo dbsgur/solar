@@ -1,21 +1,20 @@
 {
-	"New Component": {
-	"scope": "typescriptreact",
-	"prefix": "nc",
-	"body": [
-		"function ${1:$TM_FILENAME_BASE}(props: { ${2} }) {",
-		"  // prop destruction",
-		"  // lib, style hooks",
-		"  // state, ref hooks",
-		"  // formik",
-		"  // query hooks",
-		"  // calculated values",
-		"  // effects",
-		"  // handlers",
-		"  $0",
-    "  return (<></>);",
-		"}"
-	],
-	"description": "New Component"
-	}
+  "New Component": {
+    "scope": "typescriptreact",
+    "prefix": "nc",
+    "body": [
+      "function ${1:$TM_FILENAME_BASE}(props: { ${2} }) {",
+      "  // prop destruction",
+      "  // lib, style hooks",
+      "  // state, ref hooks",
+      "  // query hooks",
+      "  // calculated values",
+      "  // effects",
+      "  // handlers",
+      "  $0",
+      "  return (<></>);",
+      "}"
+    ],
+    "description": "New Component"
+  }
 }
