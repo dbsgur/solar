@@ -16,10 +16,6 @@
     "noErrorTruncation": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
-    "inlineSources": true,
-    "baseUrl": "src",
-    "outDir": "dist"
-  },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+    "inlineSources": true
+  }
 }
