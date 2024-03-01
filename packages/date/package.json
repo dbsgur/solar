@@ -1,7 +1,7 @@
 {
   "name": "date",
-  "main": "dist/date.js",
-  "types": "src/date.ts",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
   "scripts": {
     "build": "tsc"
   }

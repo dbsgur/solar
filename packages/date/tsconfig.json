@@ -1,22 +1,6 @@
 {
+  "extends": "../../server-config.json",
   "compilerOptions": {
-    "lib": ["es2022"],
-    "target": "es2022",
-    "esModuleInterop": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noEmitOnError": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "resolveJsonModule": true,
-    "removeComments": true,
-    "noErrorTruncation": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true,
-    "inlineSources": true,
     "baseUrl": "src",
     "outDir": "dist"
   },

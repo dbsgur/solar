@@ -1,0 +1,8 @@
+{
+  "name": "utils",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  }
+}
