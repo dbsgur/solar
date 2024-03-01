@@ -4,7 +4,7 @@ import {
     errorHandlerMiddleware,
     requestLoggerMiddleware,
     uuidMiddleware,
-} from '../middleware';
+} from './middlewares';
 import { router } from './routes';
 import GracefulShutdown from 'http-graceful-shutdown';
 import KoaRatelimit from 'koa-ratelimit';

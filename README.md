@@ -4,20 +4,26 @@
 
 `cd solar && yarn install && npm run solar`
 
+- You select 'server' or 'csr' or 'ssr'(progressing)
+
+---
+
 # EXPLAIN
 
 - MONO REPO
+
   - Only use yarn
   - yarn 4.1.0 (berry)
   - turbo
 
-## Server
+- Server
 
-- USE DDD Architecture
+  - USE DDD Architecture
 
-## Client (CSR)
+- Client (CSR)
+  - USE REACT, shadcn/ui, atomic pattern
 
-- USE REACT, shadcn/ui, atomic pattern
+---
 
 ## TODO
 

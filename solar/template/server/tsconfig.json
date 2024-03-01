@@ -1,9 +1,14 @@
 {
-    "extends": "../../server-config.json", // NOTE: 만들어질 프로젝트의 상대경로임.
+    "extends": "../../../server-config.json", // NOTE: 만들어질 프로젝트의 상대경로임.
     "compilerOptions": {
-        "baseUrl": "src",
+        "baseUrl": "./src",
         "outDir": "dist"
     },
     "include": ["src"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules"],
+    "typeRoots": [
+        "./node_modules/@types",
+        "../../node_modules/@types",
+        "src/@types"
+    ]
 }
