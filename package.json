@@ -14,7 +14,7 @@
   },
   "packageManager": "yarn@4.1.0",
   "scripts": {
-    "solar": "cd solar && npm run solar"
+    "solar": "cd solar && ts-node ./index.ts"
   },
   "dependencies": {
     "dayjs": "^1.11.10",
