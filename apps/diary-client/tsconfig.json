@@ -4,13 +4,13 @@
     "baseUrl": "./src",
     "paths": {
       "~assets/*": ["assets/*"],
-      "~components/*": ["app/components/*"],
-      "~hooks/*": ["app/hooks/*"],
       "~libs/*": ["app/libs/*"],
-      "~models/*": ["app/models/*"],
-      "~repositories/*": ["app/repositories/*"],
-      "~routes/*": ["app/routes/*"],
-      "~screens/*": ["app/screens/*"]
+      "~components": ["app/components"],
+      "~hooks": ["app/hooks"],
+      "~models": ["app/models"],
+      "~repositories": ["app/repositories"],
+      "~routes": ["app/routes"],
+      "~screens": ["app/screens"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react"
@@ -20,6 +20,5 @@
   "typeRoots": [
     "./node_modules/@types",
     "../../node_modules/@types",
-    "src/@types"
   ]
 }
