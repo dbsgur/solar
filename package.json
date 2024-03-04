@@ -6,7 +6,8 @@
   "license": "MIT",
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/diary-client",
+    "apps/diary-server"
   ],
   "engines": {
     "npm": "please-use-yarn",
