@@ -4,7 +4,7 @@
 
 `cd solar && yarn install && npm run solar`
 
-- You select 'server' or 'csr' or 'ssr'(progressing)
+- You select 'ssr'(made it yet🥲) or 'server' or 'csr'
 
 ---
 
