@@ -11,7 +11,9 @@
       "~repositories/*": ["app/repositories/*"],
       "~routes/*": ["app/routes/*"],
       "~screens/*": ["app/screens/*"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["src"],
   "exclude": ["node_modules"],
