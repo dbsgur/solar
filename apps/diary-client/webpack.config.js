@@ -5,7 +5,7 @@ const resolve = require('./webpack.config.resolve');
 module.exports = () => {
   return {
     resolve,
-    entry: './src/index.tsx',
+    entry: ['./src/global.css', './src/index.tsx'],
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'bundle.js',
@@ -20,7 +20,16 @@ module.exports = () => {
         },
         {
           test: /\.css$/, // .css 확장자를 가진 파일에 적용될 로더 설정
-          use: ['style-loader', 'css-loader'], // 사용할 로더 설정
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                modules: false,
+              },
+            },
+          ], // 사용할 로더 설정
         },
       ],
     },
