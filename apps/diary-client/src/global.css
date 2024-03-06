@@ -8,8 +8,8 @@ body {
 }
 
 #app {
-  width: '100%';
-  height: '100vh';
+  width: 100%;
+  height: 100vh;
 }
 
 a {
@@ -18,5 +18,8 @@ a {
 }
 
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
