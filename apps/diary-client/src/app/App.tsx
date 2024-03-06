@@ -1,13 +1,8 @@
-import { BackGroundImage } from '~components';
+import { router } from '~routes';
+import { RouterProvider } from 'react-router-dom';
 
 function App() {
-  return (
-    // <div>
-    //   <h1>Appddjdj</h1>
-    // </div>
-    // <h1>Appddjdj</h1>
-    <BackGroundImage />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
