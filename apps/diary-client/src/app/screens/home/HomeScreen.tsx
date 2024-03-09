@@ -1,4 +1,4 @@
-function DiaryPoemScreen(props: {}) {
+function HomeScreen(props: {}) {
   // prop destruction
   // lib, style hooks
   // state, ref hooks
@@ -10,4 +10,4 @@ function DiaryPoemScreen(props: {}) {
   return <></>;
 }
 
-export { DiaryPoemScreen };
+export { HomeScreen };
