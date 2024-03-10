@@ -1,3 +1,3 @@
-export * from './poem/';
-export * from './video/';
-export * from './write/';
+export * from './poem';
+export * from './video';
+export * from './write';
