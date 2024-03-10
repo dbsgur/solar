@@ -1,4 +1,4 @@
-function DiaryWirteScreen(props: {}) {
+function DiaryWriteScreen(props: {}) {
   // prop destruction
   // lib, style hooks
   // state, ref hooks
@@ -7,7 +7,7 @@ function DiaryWirteScreen(props: {}) {
   // effects
   // handlers
 
-  return <></>;
+  return <>fuck you</>;
 }
 
-export { DiaryWirteScreen };
+export { DiaryWriteScreen };
