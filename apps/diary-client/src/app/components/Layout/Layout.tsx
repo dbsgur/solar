@@ -12,7 +12,8 @@ function Layout(props: { children: React.ReactNode }) {
   // handlers
 
   return (
-    <Stack>
+    <Stack css={{ width: '100%', height: '100%' }}>
+      // TODO: Header ?
       <Contact />
       {children}
     </Stack>
