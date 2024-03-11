@@ -14,7 +14,8 @@
   },
   "packageManager": "yarn@4.1.0",
   "scripts": {
-    "solar": "cd solar && ts-node ./index.ts"
+    "solar": "cd solar && ts-node ./index.ts",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "dayjs": "^1.11.10",
@@ -25,6 +26,7 @@
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "turbo": "^1.12.4"
   }
