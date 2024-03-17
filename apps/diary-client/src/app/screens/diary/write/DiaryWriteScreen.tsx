@@ -15,7 +15,7 @@ function DiaryWriteScreen() {
     <Stack direction="column">
       <Textarea placeholder="Type anything…" minRows={4} />
       <div>
-        <Button>Diary to Poem</Button>
+        <Button>Diary to Poemd</Button>
         <Button>Diary to Video</Button>
       </div>
     </Stack>
