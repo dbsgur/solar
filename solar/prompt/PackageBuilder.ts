@@ -2,6 +2,7 @@ import fsExtra from "fs-extra";
 import fs from "fs";
 import path from "path";
 import { ProgressBar } from "./index";
+import colors from "colors/safe";
 
 export class PackageBuilder {
   current: number = 0;
@@ -36,7 +37,12 @@ export class PackageBuilder {
       string,
       (answers: Record<string, string>) => Promise<void>
     > = {
-      SSR: async (answers) => this.createTemplate("ssr", answers),
+      SSR: async (answers) =>
+        console.log(
+          colors.red(
+            "You use NEXT.JS, I don't make it better than NEXT.JS. 😁",
+          ),
+        ),
       CSR: async (answers) => this.createTemplate("csr", answers),
       SERVER: async (answers) => this.createTemplate("server", answers),
     };
@@ -54,7 +60,7 @@ export class PackageBuilder {
   private async changeWord(
     destFilePath: string,
     func: (data: string) => string,
-    data: string
+    data: string,
   ): Promise<void> {
     await new Promise<void>((resolve, reject) => {
       fs.writeFile(destFilePath, func(data), "utf-8", (err) => {
@@ -67,7 +73,7 @@ export class PackageBuilder {
   // NOTE: 파일을 읽어서 내용을 변경하고 다시 쓰는 함수입니다.
   private async changeFile(
     destFilePath: string,
-    changeFunc: (data: string) => string
+    changeFunc: (data: string) => string,
   ): Promise<void> {
     await new Promise<void>((resolve, reject) => {
       fs.readFile(destFilePath, "utf-8", async (err, data) => {
@@ -81,17 +87,17 @@ export class PackageBuilder {
   // NOTE: package.json 파일을 읽어서 name과 version을 변경합니다.
   private async changePackageJsonFile(
     name: string,
-    version: string
+    version: string,
   ): Promise<void> {
     const destinationPackageJson = path.resolve(
       __dirname,
-      `../../apps/${name}/package.json`
+      `../../apps/${name}/package.json`,
     );
     await this.changeFile(destinationPackageJson, (data) =>
-      data.replace(/1name1/g, name)
+      data.replace(/1name1/g, name),
     );
     await this.changeFile(destinationPackageJson, (data) =>
-      data.replace(/1version1/g, version)
+      data.replace(/1version1/g, version),
     );
   }
 
@@ -99,17 +105,17 @@ export class PackageBuilder {
   private async changeReadmeName(name: string): Promise<void> {
     const destinationReadme = path.resolve(
       __dirname,
-      `../../apps/${name}/README.md`
+      `../../apps/${name}/README.md`,
     );
     await this.changeFile(destinationReadme, (data) =>
-      data.replace(/1name1/g, name.toUpperCase())
+      data.replace(/1name1/g, name.toUpperCase()),
     );
   }
 
   // NOTE: 사용자가 선택한 템플릿을 복사하고 package.json, README.md 파일을 변경합니다.
   private async createTemplate(
     templateFolderName: string,
-    answers: Record<string, string>
+    answers: Record<string, string>,
   ): Promise<void> {
     this.progressBar.init();
     const { name, version } = answers;
