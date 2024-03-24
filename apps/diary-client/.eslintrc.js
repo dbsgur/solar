@@ -11,4 +11,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
   },
+  'import/resolver': {
+    node: {
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    },
+  },
 };
