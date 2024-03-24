@@ -1,4 +1,11 @@
 import { createBrowserRouter, Outlet } from 'react-router-dom';
+import { UnauthorizedRoute } from '~libs/auth-router';
+import {
+  HomeScreen,
+  DiaryPoemScreen,
+  DiaryVideoScreen,
+  DiaryWriteScreen,
+} from '~screens';
 import {
   ROUTE_ROOT,
   ROUTE_HOME,
@@ -7,14 +14,6 @@ import {
   ROUTE_DIARY_POEM,
   ROUTE_DIARY_VIDEO,
 } from './const';
-import {
-  HomeScreen,
-  DiaryPoemScreen,
-  DiaryVideoScreen,
-  DiaryWriteScreen,
-} from '~screens';
-import { UnauthorizedRoute } from '~libs/auth-router';
-import { BackGroundImage } from '~components';
 
 export const AppRouter = createBrowserRouter([
   {

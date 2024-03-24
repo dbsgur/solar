@@ -1,4 +1,4 @@
-function DiaryVideoScreen(props: {}) {
+function DiaryVideoScreen() {
   // prop destruction
   // lib, style hooks
   // state, ref hooks
@@ -7,7 +7,7 @@ function DiaryVideoScreen(props: {}) {
   // effects
   // handlers
 
-  return <></>;
+  return <>Diary</>;
 }
 
 export { DiaryVideoScreen };
