@@ -1,13 +1,14 @@
-import Koa, { Context } from 'koa';
+import 'reflect-metadata';
+import GracefulShutdown from 'http-graceful-shutdown';
+import Koa from 'koa';
 import koaBody from 'koa-body';
+import KoaRatelimit from 'koa-ratelimit';
 import {
     errorHandlerMiddleware,
     requestLoggerMiddleware,
     uuidMiddleware,
 } from './middlewares';
 import { router } from './routes';
-import GracefulShutdown from 'http-graceful-shutdown';
-import KoaRatelimit from 'koa-ratelimit';
 
 (async () => {
     const app = new Koa();
@@ -53,7 +54,7 @@ import KoaRatelimit from 'koa-ratelimit';
         onShutdown: async (signals) => {
             // TODO: DB 연결 끊기
             console.log('SERVER SHUTDOWN SIGNAL RECEIVED', signals);
-            setTimeout(function () {
+            setTimeout(() => {
                 console.log('... cleanup finished');
             }, 1000);
         },
