@@ -7,6 +7,6 @@ export class OpenAIService {
     private openAIRepository!: OpenAIRepository;
 
     async createPoem(input: string) {
-        return this.openAIRepository.createPoem(input);
+        return this.openAIRepository.getAnswer(input);
     }
 }
