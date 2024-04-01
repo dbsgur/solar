@@ -1,8 +1,12 @@
-import { Service } from 'typedi';
+import { Inject, Service } from 'typedi';
+import { OpenAIRepository } from '../infrastructure/repository';
 
 @Service()
 export class OpenAIService {
-    // poem 생성
-    // rap ?
-    // fine-tuning
+    @Inject()
+    private openAIRepository!: OpenAIRepository;
+
+    async createPoem(input: string) {
+        return this.openAIRepository.createPoem(input);
+    }
 }

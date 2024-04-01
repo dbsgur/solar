@@ -5,20 +5,32 @@ import { Service } from 'typedi';
 // OpenAI 서비스 정의
 @Service()
 export class OpenAIRepository {
-    client;
+    private _client: any;
 
-    constructor() {
-        this.client = new OpenAI();
+    private get client() {
+        if (!this._client) {
+            this._client = new OpenAI();
+            // TODO: fine-tuning 여러개 추상화 ?
+            this.readStream('PoemTone.jsonl');
+        }
+        return this._client;
     }
 
     get audio() {
         return this.client.audio;
     }
 
-    async fineTuningTone() {
+    async readStream(file: string) {
         await this.client.files.create({
-            file: fs.createReadStream('tone.jsonl'),
+            file: fs.createReadStream(file),
             purpose: 'fine-tune',
+        });
+    }
+
+    createPoem(input: string) {
+        return this.client.completions.create({
+            model: 'gpt-4',
+            prompt: input,
         });
     }
 }
