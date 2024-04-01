@@ -27,7 +27,7 @@ export class OpenAIRepository {
         });
     }
 
-    createPoem(input: string) {
+    getAnswer(input: string) {
         return this.client.completions.create({
             model: 'gpt-4',
             prompt: input,
