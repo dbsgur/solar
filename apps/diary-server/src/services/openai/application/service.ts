@@ -9,4 +9,8 @@ export class OpenAIService {
     async createPoem(input: string) {
         return this.openAIRepository.getAnswer(input);
     }
+
+    async fineTuning(type: string) {
+        return this.openAIRepository.readStream(type);
+    }
 }

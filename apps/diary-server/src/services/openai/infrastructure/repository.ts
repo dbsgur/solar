@@ -20,7 +20,8 @@ export class OpenAIRepository {
         return this.client.audio;
     }
 
-    async readStream(file: string) {
+    async readStream(type: string) {
+        const file = type === 'poem' ? 'PoemTone.jsonl' : 'RapTone.jsonl';
         await this.client.files.create({
             file: fs.createReadStream(file),
             purpose: 'fine-tune',
