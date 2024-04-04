@@ -33,3 +33,5 @@ node_modules/
 dist
 
 .env
+
+apps/*/.env.local
