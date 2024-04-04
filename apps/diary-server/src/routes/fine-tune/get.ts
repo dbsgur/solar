@@ -1,12 +1,13 @@
 import Router from '@koa/router';
 import { Container } from 'typedi';
-import { OpenAIService } from '../../../services/openai/application/service';
+import { DiaryService } from '../../services/diary/application/service';
 
 const router = new Router();
 
 router.get('/', async (ctx) => {
-    const openAiService = Container.get(OpenAIService);
-    await openAiService.fineTuning('poem');
+    // type 받기
+    const diaryService = Container.get(DiaryService);
+    await diaryService.fineTunning('poem');
 
     ctx.body = {};
     ctx.status = 200;
