@@ -16,7 +16,11 @@ export class DiaryService {
         return this.openAIClient[type].fineTunning();
     }
 
-    creation(type: 'poem' | 'rap', input: string) {
-        return this.openAIClient[type].get(input);
+    createText(type: 'poem' | 'rap', originalText: string) {
+        return this.openAIClient[type].create(originalText);
+    }
+
+    createSpeech(originalText: string) {
+        return this.openAIClient.createSpeech(originalText);
     }
 }
