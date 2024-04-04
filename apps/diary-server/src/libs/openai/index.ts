@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 import OpenAI from 'openai';
 
 export class OpenAIClient {
@@ -12,11 +13,37 @@ export class OpenAIClient {
         return this._client;
     }
 
-    createSpeech(text: string) {
-        return this.client.completions.create({
+    async createSpeech(text: string) {
+        // const speechFile = path.resolve('./speech.mp3');
+        // const mp3 = await this.client.audio.speech.create({
+        //     model: 'tts-1',
+        //     voice: 'alloy',
+        //     input: 'Today is a wonderful day to build something people love!',
+        // });
+        // const buffer = Buffer.from(await mp3.arrayBuffer());
+        // await fs.promises.writeFile(speechFile, buffer);
+        return this.client.audio.speech.create({
             model: 'tts-1-hd',
-            prompt: text,
+            voice: 'nova',
+            input: text,
         });
+    }
+
+    async createImage(prompt: string) {
+        // HACK: 여러개 생성해야하는데, dalle3는 한번에 하나만 생성 가능
+        const images = await Promise.all([
+            this.client.images.generate({
+                model: 'dall-e-3',
+                style: 'natural',
+                prompt,
+            }),
+            this.client.images.generate({
+                model: 'dall-e-3',
+                style: 'natural',
+                prompt,
+            }),
+        ]);
+        return images;
     }
 
     public poem = {
@@ -26,7 +53,7 @@ export class OpenAIClient {
                 purpose: 'fine-tune',
             });
         },
-        get: (input: string) => {
+        create: (input: string) => {
             return this.client.completions.create({
                 model: 'gpt-4',
                 prompt: input,
@@ -41,7 +68,7 @@ export class OpenAIClient {
                 purpose: 'fine-tune',
             });
         },
-        get: (input: string) => {
+        create: (input: string) => {
             return this.client.completions.create({
                 model: 'gpt-4',
                 prompt: input,
