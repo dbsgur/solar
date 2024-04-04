@@ -1,6 +1,7 @@
 import Router from '@koa/router';
 import { Context } from 'koa';
-import { openaiRouter } from './openai';
+import { diaryRouter } from './diary';
+import { fineTuneRouter } from './fine-tune';
 
 export const router = new Router();
 
@@ -10,4 +11,5 @@ router.get('/ping', (ctx: Context) => {
     ctx.body = 'pong';
 });
 
-router.use(openaiRouter.routes());
+router.use(diaryRouter.routes());
+router.use(fineTuneRouter.routes());
