@@ -1,24 +1,26 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import IconButton from '@mui/material/IconButton';
 import Slide from '@mui/material/Slide';
+import { styled } from '@mui/material/styles';
 import { TransitionProps } from '@mui/material/transitions';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
 import { BackGroundImage } from '~components';
 
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<any, any>;
+const Transition = React.forwardRef(
+  (
+    props: TransitionProps & {
+      children: React.ReactElement<any, any>;
+    },
+    ref: React.Ref<unknown>,
+  ) => {
+    return <Slide direction="up" ref={ref} {...props} />;
   },
-  ref: React.Ref<unknown>,
-) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
+);
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -30,7 +32,7 @@ function Contact() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <React.Fragment>
+    <>
       <Button
         // variant="outlined"
         onClick={() => setOpen(true)}
@@ -72,7 +74,7 @@ function Contact() {
           <Typography gutterBottom>made by Hyeok</Typography>
         </DialogContent>
       </BootstrapDialog>
-    </React.Fragment>
+    </>
   );
 }
 
