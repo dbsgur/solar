@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface State {
 }
 
 /* eslint-disable */
-class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
   };
@@ -32,5 +32,3 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 /* eslint-able */
-
-export default ErrorBoundary;
