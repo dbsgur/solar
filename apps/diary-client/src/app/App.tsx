@@ -7,7 +7,6 @@ import { AppRouter } from '~routes';
 const queryClient = new QueryClient();
 
 function App() {
-  // Suspense
   return (
     <QueryClientProvider client={queryClient}>
       <ErrorBoundary>
