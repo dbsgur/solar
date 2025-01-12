@@ -34,7 +34,7 @@ function Contact() {
   return (
     <>
       <Button
-        // variant="outlined"
+        variant="outlined"
         onClick={() => setOpen(true)}
         css={{
           width: '50px',
